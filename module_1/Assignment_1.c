@@ -1,4 +1,3 @@
-#include<stdio.h>
 
 void main(int argc , char * argv[])
 {
@@ -9,7 +8,7 @@ void main(int argc , char * argv[])
     printf("Not enough numbers to add up!");
     exit(1);
   }
-  
+
   for(i=1;i<argc;i++)
     sum = sum + atoi(argv[i]);
 
