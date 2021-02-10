@@ -1,0 +1,15 @@
+Write a parallel program using OpenMP to parallelize your program from Chapter Two. There is an online list of first and last names from the 1990 census ( HYPERLINK "http://www.census.gov/genealogy/names/names_files.html" http://www.census.gov/genealogy/names/names_files.html). You may choose any one of the three files as your input.
+
+Your task is to find all words in the dictionary that have unique letters—i.e., words in which no letter occurs more than once. I suggest that you first write a sequential program and then modify it to use parallelism. Your sequential program should have the following phases:
+
+• Read the file into an array of strings. You may assume that each word is at most 25 characters long. Declare an integer array of the same length and initialize it to zeros; this array will be used to record the lengths of words that contain unique letters.
+• Examine each word, one at a time. If it has unique letters, then set the corresponding entry in the second array to the length of the word.
+• After you have examined all words, go back through the array of word lengths. Count the total number of words with unique letters, and write those that have at least six unique letters to a file named “results”. At the end of the program, write the total count to standard output. You are to consider only those words that consist of upper-case letters.
+
+To summarize, your OpenMP program should have the following output:
+
+the total number of words with unique letters,
+the number of those words found by each parallel worker,
+and the words that contain at least 6 unique letters.
+
+Write the first two items to standard output; write the words to a file named “results” in the directory that contains your program.
